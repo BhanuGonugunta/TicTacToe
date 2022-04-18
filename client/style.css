@@ -1,0 +1,87 @@
+html, body{
+    margin: 0;
+    height: 100%;
+}
+
+body{
+    background-color: #f6f6f2;
+}
+
+#gameOver{
+    margin: 3%;
+    color: #6fb3b8 !important;
+}
+
+.display-6{
+    font-weight: bold !important;
+}
+
+#gameContainer{
+    margin: 3%;
+}
+
+.square{
+    resize: horizontal;
+    border: 2px solid #6fb3b8;
+}
+
+.navbar{
+    background-color: #6fb3b8 !important;
+    color: #f6f6f2;
+}
+
+.display-5{
+    font-weight:bold !important;
+}
+
+.square > p{
+    font-weight:400;
+    font-size: 5rem;
+    height: 100px;
+    line-height: 100px;
+}
+
+.notClicked:hover{
+    background-color: #badfe7;
+}
+
+.btn-primary {
+    /* margin: 2% 3%; */
+    background-color: #6fb3b8 !important;
+    color: #f6f6f2 !important;
+    border-color: #6fb3b8 !important;
+}
+
+.btn-primary:hover{
+    background-color: #6fb3b8 !important;
+}
+
+.p2{
+    color: #ffbe61;
+
+}
+
+.p1{
+    color: #A7C7E7;
+}
+
+.connect {
+    margin-right: 0% !important;
+    padding-right: 0% !important;
+}
+
+.btn-success {
+    background-color: #8BD3E6 !important;
+}
+
+.form-control {
+    max-width: 300px;
+}
+
+.d-flex {
+    justify-content: center;
+}
+
+#details {
+    margin-left: 1%;
+}
