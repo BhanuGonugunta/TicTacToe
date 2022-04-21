@@ -78,6 +78,7 @@ io.on("connection", (socket) => {
 
     socket.on("sendResultsToServer", (pid, c) => {
         socket.to(pid).emit("displayResults", c);
+        socket.to(pid).emit("secondTurn");
     });
 
     socket.on("drawMatch", () => {
