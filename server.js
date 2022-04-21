@@ -3,12 +3,19 @@ var http = require('http');
 const app = express();
 const server = http.createServer(app);
 const io = require('socket.io')(server);
+var cors = require('cors')
 
 //express
 app.set('view engine', 'ejs');
 app.use(express.static('public'));
+app.use(cors());
 
-app.get('/', (req, res) => {
+var corsOptions = {
+    origin: 'http://otickytackyx.herokuapp.com/',
+    optionsSuccessStatus: 200 // some legacy browsers (IE11, various SmartTVs) choke on 204
+}
+
+app.get('/', cors(corsOptions), (req, res) => {
     res.render('index');
 });
 
