@@ -1,9 +1,15 @@
-const port = process.env.PORT || 3001
+var express = require('express');
+var http = require('http');
+const app = express();
+const server = http.createServer(app);
+const io = require('socket.io')(server);
 
-const io = require("socket.io")(port, {
-    cors: {
-        origin: ["http://localhost:8080"],
-    }
+//express
+app.set('view engine', 'ejs');
+app.use(express.static('public'));
+
+app.get('/', (req, res) => {
+    res.render('index');
 });
 
 var users = {};
@@ -111,3 +117,4 @@ io.on("connection", (socket) => {
     });
 });
 
+server.listen(process.env.PORT || 8080);

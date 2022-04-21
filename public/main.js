@@ -1,4 +1,4 @@
-import { io } from "socket.io-client";
+// import { io } from "../node_modules/socket.io-client";
 
 const container = document.getElementById("gameContainer");
 const squareArray = [[], [], []];
@@ -13,7 +13,7 @@ var pid;
 var canClick = true;
 
 //server functions
-const socket = io("http://localhost:3001");
+const socket = io("http://localhost:8080");
 socket.on('connect', () => {
     document.getElementById('yourID').innerHTML = 'Your ID: '+socket.id.substring(0,5);
 });
