@@ -13,7 +13,7 @@ var pid;
 var canClick = true;
 
 //server functions
-const socket = io("http://localhost:8080");
+const socket = io("https://otickytackyx.herokuapp.com/");
 socket.on('connect', () => {
     document.getElementById('yourID').innerHTML = 'Your ID: '+socket.id.substring(0,5);
 });
