@@ -264,6 +264,7 @@ class ClassSquare {
 
         if(wonGame()) {
             socket.emit("sendResultsToServer", pid, div.state);
+            
         }
         if(isDraw()) {
             socket.emit("drawMatch");
